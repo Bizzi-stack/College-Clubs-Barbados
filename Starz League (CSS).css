@@ -1,0 +1,497 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+:root{
+    --green: #14ff5f;
+    --grey: #e4e9f0;
+    --blue: #0054fc;
+    --blueblur: rgba(0, 90, 245, 0.3);
+    --white: #fff;
+    --orange:rgba(255, 94, 0, 0.651);
+    --black: #000;
+    --whiteblur: rgba(255, 255, 255, 0.05);
+    --red: rgb(255, 0, 0);
+    --yellow: rgb(255, 238, 0);
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Resources/Background\ 3.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+}
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    transition: 1s;
+}
+nav .logo{
+    display: flex;
+    align-items: center;
+}
+nav .logo img{
+    width: 70px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 35px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 550;
+    font-size: 14px;
+}
+nav:hover{
+    background:var(--white);
+}
+nav:hover img{
+    filter: invert(100%);
+}
+nav:hover ul li a{
+    color: var(--black)
+}
+.content{
+    margin: 9% 0 0 9%;
+    color: var(--white)
+}
+.content h1{
+    font-size: 120px;
+    line-height: 115px;
+    font-weight: 600;
+}
+.content p{
+    max-width: 500px;
+    line-height: 20px;
+    margin-top: 25px;
+    opacity: 0;
+}
+.links{
+    margin-top: 30px;
+    opacity: 0;
+}
+.links a{
+    color: var(--white);
+    text-decoration: none;
+    display: inline-block;
+}
+.btn{
+    border: 2px solid var(--white);
+    padding: 10px 35px;
+    border-radius: 30px;
+    margin-right: 15px;
+    transition: 0.75s;
+}
+.btn:hover{
+    background-color: var(--green);
+    color: var(--black);
+    border: var(--green);
+}
+.slide-left{
+    animation: slide-left 1s linear forwards;
+}
+@keyframes slide-left{
+    0%{
+        transform: translate(100px);
+    }
+    100%{
+        transform: translate(0px);
+        opacity: 1;
+    }
+}
+p.slide-left{
+    animation-delay: 0.4s;
+}
+.links.slide-left{
+    animation-delay: 1.12s; 
+}
+.mouse-wrapper{
+    position: absolute;
+    top: 91.5%;
+    left: 52%;
+    transform: translate(-50%,-50%);
+}
+.mouse{
+    width: 40px;
+    height: 60px;
+    border: 2px solid #fff;
+    border-radius: 40px;
+}
+.mouse::before{
+    content: "";
+    width: 8px;
+    height: 10px;
+    position: absolute;
+    top: 15px;
+    background: #fff;
+    left: 30%;
+    transform: translate(50%);
+    border-radius: 45%;
+    opacity: 1;
+    animation: mouse 2s infinite;
+}
+@keyframes mouse {
+    from{
+        opacity: 1;
+        top: 10px;
+    }
+    to{
+        opacity: 0;
+        top: 35px;
+    }
+}
+
+/*Creating & Joining*/
+
+.club-mode{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Resources/Background\ 4.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow-y: hidden;
+}
+.club-content{
+    margin: 6% 0 0 9%;
+    color: var(--white)
+}
+.club-content h1{
+    font-size: 100px;
+    font-weight: 600;
+}
+.club-content p{
+    margin-top: 5px;
+    max-width: 500px;
+    line-height: 20px;
+}
+.club-content p span{
+    font-weight: 600;
+}
+.clubs{
+    margin-top: 50px;
+}
+.club-box{
+    width: 300px;
+    height: 230px;
+    background-color: var(--whiteblur);
+    border-radius: 10px;
+    box-shadow: 2px 10px 12px rgba(0, 0, 0, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin: 20px 120px 20px 0;
+}
+.club-logo{
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+.clubs-viewer{
+    display: flex;
+    flex-direction: row;
+}
+.club-links{
+    margin-top: 30px;
+}
+.club-links a{
+    color: var(--white);
+    text-decoration: none;
+    display: inline-block;
+}
+.C-btn{
+    border: 2px solid var(--white);
+    padding: 10px 50px;
+    border-radius: 30px;
+    /*margin-right: 15px;*/
+    transition: 0.75s;
+}
+.C-btn-1{
+    border: 2px solid var(--white);
+    padding: 10px 50px;
+    border-radius: 30px;
+    /*margin-right: 15px;*/
+    transition: 0.75s;
+}
+.C-btn-2{
+    border: 2px solid var(--white);
+    padding: 10px 50px;
+    border-radius: 30px;
+    /*margin-right: 15px;*/
+    transition: 0.75s;
+}
+.C-btn-1:hover{
+    background-color: var(--red);
+    color: var(--white);
+    border: var(--red);
+}
+.C-btn-2:hover{
+    background-color: var(--yellow);
+    color: var(--black);
+    border: var(--yellow);
+}
+.C-btn:hover{
+    background-color: var(--green);
+    color: var(--black);
+    border: var(--green);
+}
+
+/*Rankings*/
+
+.rankings{
+width: 100%;
+height: 100vh;
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Resources/Ranks\ II.jpg);
+background-position: center;
+background-size: cover;
+overflow-y: hidden;
+}
+.rank-content{
+    margin: 6% 0 0 9%;
+    color: var(--white)
+}
+.rank-content h1{
+    font-size: 100px;
+    font-weight: 600;
+}
+.rank-content p{
+    margin-top: 5px;
+    max-width: 500px;
+    line-height: 20px;
+}
+.rank-content p span{
+    font-weight: 600;
+}
+.ranks{
+    margin-top: 50px;
+}
+.rank-viewer{
+    display: flex;
+    flex-direction: row;
+}
+.rank-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background-color: var(--whiteblur);
+    border-radius: 10px;
+    box-shadow: 2px 10px 12px rgba(0, 0, 0, 1);
+    margin: 20px 120px 20px 0;
+}
+.rank-box img{
+height: auto;
+max-height: 100%;
+max-width: 100%;
+}
+
+/*Tournaments*/
+
+.tournaments{
+width: 100%;
+height: 100vh;
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Resources/Background\ 1.jpg);
+background-position: center;
+background-size: cover;
+overflow-y: hidden;
+}
+.tournament-content{
+    margin: 6% 0 0 9%;
+    color: var(--white)
+}
+.tournament-content h1{
+    font-size: 100px;
+    font-weight: 600;
+}
+.tournament-content p{
+    margin-top: 5px;
+    max-width: 500px;
+    line-height: 20px;
+}
+.countd-content{
+    transform: translateY(-50%);
+    margin: 12% 0 0 9%;
+    color: var(--white)
+}
+.countd-content h1{
+    font-size: 64px;
+    font-weight: 600;
+}
+.Launch-time{
+    display: flex;
+}
+.Launch-time div{
+    flex-basis: 120px;
+}
+.Launch-time div p{
+    font-size: 60px;
+    margin-bottom: -14px;
+}
+
+/*footer*/
+
+footer{
+    background: var(--black);
+    height: auto;
+    padding-top: 40px;
+    color: var(--white);
+    overflow-x: hidden;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 14px;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0 30px 0;
+}
+.socials li{
+    margin: 0 25px;
+    font-size: 24px;
+    transition: 1s;
+}
+.socials a{
+    text-decoration: none;
+    color: var(--white);
+}
+.socials a:hover i{
+    color: var(--green);
+    transition: .5s;
+}
+.footer-bottom{
+    background: var(--black);
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+}
+.footer-bottom span{
+    font-weight: 550;
+}
+
+/*Player Ranks Page Start*/
+
+.rankpage-header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Resources/Background\ 8.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+}
+.rankpage-content{
+    margin: 6% 0 0 9%;
+    color: var(--white)
+}
+.rankpage-content h1{
+    font-size: 70px;
+    font-weight: 600;
+}
+.table-container{
+    color: var(--black);
+    margin: 25px 0 25px 0;
+}
+table{
+    border-collapse: collapse;
+    box-shadow: 0 5px 10px var(--black);
+    border-radius: 10px;
+    background-color: var(--white);
+    text-align: left;
+    overflow: hidden;
+}
+thead{
+    box-shadow: 0 1px 15px var(--black);
+}
+th{
+    padding: 16px 88px;
+    font-size: 14px;
+    font-weight: 900;
+}
+td{
+    padding: 16px 88px;
+}
+.status{
+    border-radius: 7px;
+    background-color: var(--blueblur);
+    color: var(--blue);
+    padding: 5px 16px;
+    text-align: center;
+}
+tr:nth-child(even){
+    background-color: var(--grey);
+}
+td img{
+    height: 45px;
+}
+
+/*Player Ranks Page End*/
+
+/*Clubs Page Start*/
+
+.clubs-header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Resources/Background\ 9.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+}
+.clubspage-content{
+    margin: 6% 0 0 9%;
+}
+.clubs h1{
+    font-size: 100px;
+    font-weight: 600;
+    color: var(--white);
+}
+.clubs p{
+    color: var(--white);
+    font-size: 18px;
+}
+.C-btn i{
+    padding-left: 16px;
+}
+
+/*Clubs Page End*/
+
+/*Tournament Page Start*/
+
+.tournament-header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Resources/Background\ 10.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+/*Tournament Page End*/
